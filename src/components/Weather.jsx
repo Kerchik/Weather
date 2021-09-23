@@ -1,20 +1,19 @@
 import React from "react";
 
-const Weather = (props) => (
-<div>
-            {props.city &&
-             <div>
-                <p>Местоположение: {props.city},{props.country}</p>
-                <p>Температура: {props.temp}</p> 
-                <p>Давление: {props.pressure}</p>
-                <p>Заход солнца: {props.sunset}</p> 
-            </div>
+const Weather = ({city, country, temp, pressure, sunset, error}) => {
+    return (
+        <div className="margin-below-xl">
+            {city &&
+                <div>
+                    <p>Location: {city},{country}</p>
+                    <p>Temperature: {temp}</p> 
+                    <p>Pressure: {pressure}</p>
+                    <p>Sunset: {sunset}</p> 
+                </div>
             }
-             <p>{props.error}</p>   
-            </div>
-);
+            <p className="text-warning">{error}</p>   
+        </div>
+    )
+}
     
-    
-
-
 export default Weather;
