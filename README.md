@@ -5,3 +5,6 @@ http://api.openweathermap.org
 
 Start project:
 npm run start
+
+Demo:
+https://kerchik.github.io/Weather/
